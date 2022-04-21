@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Ex1087 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int num = scan.nextInt();
