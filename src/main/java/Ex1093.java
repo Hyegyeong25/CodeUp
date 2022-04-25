@@ -8,15 +8,15 @@ public class Ex1093 {
         Scanner scan = new Scanner(System.in);
         int n1 = scan.nextInt();
         int[] nArr = new int[n1];
-        int[] nCnt = new int[n1];
+        int[] nCnt = new int[23];
         for(int i = 0; i < nArr.length; i++){
             nArr[i] = scan.nextInt();
-            nCnt[i] = 0;
-        }
-        for(int i = 0; i < nCnt.length; i++){
             int cnt = nArr[i];
             nCnt[cnt-1]++;
         }
-        System.out.println(Arrays.toString(nCnt));
+        for(int i = 0; i < nCnt.length; i++){
+            System.out.print(nCnt[i]+" ");
+        }
+        //System.out.println(Arrays.toString(nCnt));
     }
 }
