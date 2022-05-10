@@ -1,21 +1,28 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 public class Test {
     public static void main(String[] args) {
-        System.out.println("1번");
-        for(int i = 3; i < 9; i++){
-            for(int j = 2; j < 7; j++){
-                System.out.println(i + "X" + j + "=" + i*j );
-            }
-        }
+        Scanner sc = new Scanner(System.in);
 
-        System.out.println("2번");
-        int hap = 0;
-        for(int i = 50; i < 101; i++){
-            if(!( (i % 3 == 0) || (i % 7 == 0) || (i % 11 == 0) )){
-                hap += i;
+        List<Integer> stu = new ArrayList<>();
+        int i;
+        for (i = 1; i <=23 ; i++) {
+            stu.add(i); // ?? 이거 왜 해줬을까
+        }
+        int n = sc.nextInt(); // 10번 부르겠다
+        int [] arr = new int[n];
+
+        // 10개 입력 받아야지
+        for (int j = 0; j <arr.length; j++) {
+            arr[j] = sc.nextInt();
+            if (i == arr[j]) {
+                i++;
             }
         }
-        System.out.println(hap);
+        for (int k = 0; k <stu.size(); k++) {
+            System.out.println(stu);
+        }
     }
 }
-
-
