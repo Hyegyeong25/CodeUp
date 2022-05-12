@@ -1,28 +1,28 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
 public class Test {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        int a[] = {1000, 20, 40, 40, 100000, 100, 1, 100000, 1, 100000, 1, 100000};
+        int b[][] = new int[a.length][2];
 
-        List<Integer> stu = new ArrayList<>();
-        int i;
-        for (i = 1; i <=23 ; i++) {
-            stu.add(i); // ?? 이거 왜 해줬을까
-        }
-        int n = sc.nextInt(); // 10번 부르겠다
-        int [] arr = new int[n];
-
-        // 10개 입력 받아야지
-        for (int j = 0; j <arr.length; j++) {
-            arr[j] = sc.nextInt();
-            if (i == arr[j]) {
-                i++;
+        for(int i = 0; i < a.length; i++){
+            for(int j = i; j < a.length; j++){
+                if(b[i][0] == a[j]){
+                    b[i][1]++;
+                } else if(b[i][0] == 0){
+                    b[i][0] = a[j];
+                    b[i][1]++;
+                }
             }
         }
-        for (int k = 0; k <stu.size(); k++) {
-            System.out.println(stu);
+        int c[][] = new int[a.length][2];
+        System.arraycopy(b, 0, c, 0, a.length);
+        for(int i = 1; i < a.length; i++){
+            for(int j = 0; j < a.length; j++){
+                if(i != j && c[j][0] == b[i][0] ) c[j][0] = 0;
+            }
+        }
+        for(int i = 0; i < c.length; i++){
+            if(c[i][0] != 0)
+                System.out.println(i+ " : " + c[i][0] + " -> " + c[i][1]);
         }
     }
 }
