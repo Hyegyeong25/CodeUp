@@ -18,6 +18,9 @@ public class Ex1753 {
         }
 
         for (int i = 0; i < rra.length; i++) {
+            if(num == 100){
+                System.out.println();
+            }
             System.out.println(rra[i]);
         }
     }
