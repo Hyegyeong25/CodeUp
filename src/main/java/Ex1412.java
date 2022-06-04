@@ -14,7 +14,7 @@ public class Ex1412 {
             }
         }
         for (int i = 0; i < 26; i++) {
-            System.out.printf("%c : %d \n", 97+i, alphabet[i]);
+            System.out.printf("%c:%d \n", 97+i, alphabet[i]);
         }
     }
 }
