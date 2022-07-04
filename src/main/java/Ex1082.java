@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ex1082 {
+class Ex1082 {
     public static void main(String[] arg){
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt(16);
